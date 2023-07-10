@@ -37,3 +37,34 @@ $("#show").click(function() {
   $("#hide").show();
 });
 ```
+## Codebyte Example
+
+The following jQuery code will animates all hidden paragraphs to show slowly, completing the animation within 600 milliseconds.
+
+```codebyte/html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>show demo</title>
+  <style>
+  p {
+    background: yellow;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+</head>
+<body>
+ 
+<button>Show it</button>
+<p style="display: none">Hello  2</p>
+ 
+<script>
+$( "button" ).on( "click", function() {
+  $( "p" ).show( "slow" );
+});
+</script>
+ 
+</body>
+</html>
+```

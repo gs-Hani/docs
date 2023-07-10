@@ -42,3 +42,42 @@ $("#btn").click(function() {
   $("#p1").html("<b>New Text.</b>");
 });
 ```
+## Codebyte Example
+
+The following jQuery code will convert the HTML in `#p` to text when clicked:
+
+```codebyte/html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>html demo</title>
+    <style>
+    p      { margin: 8px; font-size: 20px; color: blue; cursor: pointer; }
+    b      { text-decoration: underline; }
+    button { cursor: pointer; }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+  </head>
+  <body>
+  
+    <p>
+      <b>Click</b> to change the <span id="tag">html</span>
+    </p>
+    <p>
+      to a <span id="text">text</span> node.
+    </p>
+    <p>
+      This <button name="nada">button</button> does nothing.
+    </p>
+    
+    <script>
+      $( "p" ).on( "click", function() {
+        const htmlString = $( this ).html();
+        $( this ).text( htmlString );
+      });
+    </script>
+  
+  </body>
+</html>
+```
